@@ -71,6 +71,63 @@ I have used jason web tokens(jwt) for tokens.
 
 **Gallery**
 
+
+-   `GET /api/gallery/`
+
+	Gets all the Folders of Images of the logged in user. Requires token in the Authorization header.
+  
+	Response Body:
+	```
+	[
+	  {
+	    "id":  1,
+	    "image_label":  "string"
+	  },
+	  {
+	    "id":  2,
+	    "image_label":  "string"
+	  }
+	]
+	```
+
+-   `GET /api/gallery/:id/`
+
+	Gets all the Images of the folder with given id. Requires token in the Authorization header.
+  
+	Response Body:
+	```
+	{
+	  "id":  1,
+	  "images":  ["Base64Images"],
+	  "image_label":  "string"
+	}
+	```
+	
+
+-   `POST /api/gallery/upload/` 
+
+	Adds a picture in the folder classified by face-recognition model and returns the folder name in which image is added. Requires token in the Authorization header.
+  
+	Request Body:
+	```
+	{
+	  "images": "Base64Image",
+	  "image_label": "string", -> if required
+	}
+	```
+	Response Body:
+	```
+	{
+	  "image_label":  "string"
+	}
+	```
+	
+
+-   `PUT /api/gallery/:id/:index`
+
+	Removes the Picture with given id and index. Requires token in the Authorization header.
+
+
 **Todo**
 
 -   `GET /api/todo/`
