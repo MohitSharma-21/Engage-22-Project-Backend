@@ -19,7 +19,7 @@ I have used jason web tokens(jwt) for tokens.
 
 **Auth**
 
--   `POST /api/auth/login/` 
+-   `POST /api/auth/sign-in/` 
 
 	Takes the username as input, validates it and returns the **FaceDescriptors** of user, if the credentials are valid.  
   
@@ -33,31 +33,33 @@ I have used jason web tokens(jwt) for tokens.
 	```
 	{
 	  "token":  "string"
+	  "labeledFaceDescriptors":"json"
 	}
 	```
-	Response Code: `200`
 	
--   `POST /api/auth/register/`
+	
+-   `POST /api/auth/sign-up/`
 
-	Register a user in Django by taking the name, email, username and password as input.
+	Registers a user by taking the name and images(Base64Images) as input.
   
 	Request Body:
 	```
 	{
 	  "username": "string",
-	  "password": "string"
+	  "images_to_validate": "array of Base64 Images"
 	}
 	```
 	Response Body (Sample):
 	```
 	{
+	  "user": "string"
 	  "token":  "string"
 	}
 	```
 	
--   `POST /api/auth/profile/`
+-   `GET /api/auth/profile/`
 
-	Retrieve the id and username of the logged in user. Requires token in the Authorization header.
+	Retrieves the id and username of the logged in user. Requires token in the Authorization header.
   
 	Response Body:
 	```
@@ -67,12 +69,13 @@ I have used jason web tokens(jwt) for tokens.
 	}
 	```
 
+**Gallery**
 
 **Todo**
 
 -   `GET /api/todo/`
 
-	Get all the Todos of the logged in user. Requires token in the Authorization header.
+	Gets all the Todos of the logged in user. Requires token in the Authorization header.
   
 	Response Body:
 	```
@@ -87,11 +90,11 @@ I have used jason web tokens(jwt) for tokens.
 	  }
 	]
 	```
-	Response Code: `200`
+	
 
--   `POST /api/todo/create/` **(The Response Body of this endpoint is different from what we have created for Task 1)**
+-   `POST /api/todo/create/` 
 
-	Create a Todo entry for the logged in user. Requires token in the Authorization header.
+	Creates a Todo entry for the logged in user. Requires token in the Authorization header.
   
 	Request Body:
 	```
@@ -109,7 +112,7 @@ I have used jason web tokens(jwt) for tokens.
 
 -   `GET /todo/:id/`
 
-	Get the Todo of the logged in user with given id. Requires token in the Authorization header.
+	Gets the Todo of the logged in user with given id. Requires token in the Authorization header.
   
 	Response Body:
 	```
@@ -118,11 +121,10 @@ I have used jason web tokens(jwt) for tokens.
 	  "title":  "string"
 	}
 	```
-	Response Code: `200`
 
 -   `PUT /api/todo/:id/`
 
-	Change the title of the Todo with given id, and get the new title as response. Requires token in the Authorization header.
+	Changes the title of the Todo with given id, and gets the new title as response. Requires token in the Authorization header.
   
 	Request Body:
 	```
@@ -140,7 +142,7 @@ I have used jason web tokens(jwt) for tokens.
 
 -   `PATCH /api/todo/:id/`
 
-	Change the title of the Todo with given id, and get the new title as response. Requires token in the Authorization header.
+	Changes the title of the Todo with given id, and gets the new title as response. Requires token in the Authorization header.
   
 	Request Body:
 	```
@@ -158,5 +160,5 @@ I have used jason web tokens(jwt) for tokens.
 
 -   `DELETE /api/todo/:id/`
 
-	Delete the Todo with given id. Requires token in the Authorization header.
+	Deletes the Todo with given id. Requires token in the Authorization header.
   
