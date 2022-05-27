@@ -47,6 +47,19 @@ Run this command in different terminal for connecting to local system database
 mongod
 ```
 
+**Note** - If error comes like the below.
+
+```
+ return process.dlopen(module, path.toNamespacedPath(filename));
+                 ^
+ Error: Cannot find the specified module.
+```
+
+ **Move** node_modules@tensorflow\tfjs-node\deps\lib\tensorflow.dll **to** node_modules@tensorflow\tfjs-node\lib\napi-v6
+ 
+**ps** napi-v6 could be v5 or else depending on version
+
+
 ## API Description
 
 ### Auth System
