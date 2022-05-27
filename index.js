@@ -37,9 +37,8 @@ app.use(cors());
 app.disable("x-powered-by");
 
 const PORT = process.env.PORT || 5000;
-const mongoDB = "mongodb://127.0.0.1/node-face-recognition-app";
-// const mongoDB = "mongodb+srv://mohit:mohit@engage22project.tgw3n.mongodb.net/engage-22-project?retryWrites=true&w=majority";
-// const mongoDB = process.env.DB_URL || "mongodb://127.0.0.1/node-face-recognition-app";
+// const mongoDB = "mongodb://127.0.0.1/node-face-recognition-app";
+const mongoDB = process.env.DB_URL || "mongodb://127.0.0.1/node-face-recognition-app";
 
 // mongoose.set("useFindAndModify", false);
 // mongoose.set("useCreateIndex", true);
