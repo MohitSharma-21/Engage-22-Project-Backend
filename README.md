@@ -2,11 +2,33 @@
 
 ### Setting up the project
 
-- Fork and clone this repo.
-- Go the project folder in terminal and run `yarn` to install all dependencies.
-- Run `yarn connectDB`to connect to the DB.
-- Start the development server using `yarn dev`.
+Follow the following steps to setup this project.
 
+**Note** - This project requires mongodb database and npm package manager to run on the local system.
+
+### Run the server
+
+- Clone this repo.
+- Go the project folder in terminal.
+
+Install the dependencies using
+```
+npm install
+```
+
+Then you can finally run the server using this command.
+```
+nodemon index.js
+```
+
+On successful execution and connecting to the database It will console log "Server connnected..." .
+
+**Note** - If you want to connect to local system database, make sure that you have installed mongodb.
+
+Run this command in different terminal for connecting to local system database
+```
+mongod
+```
 
 ## API Description
 
