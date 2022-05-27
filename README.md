@@ -1,5 +1,16 @@
 # Engage-22-Project-Backend
 
+
+## Introduction
+
+In this project, I have used:
+
+- Nodejs (Expressjs)
+- Mongodb as a database
+- [face-api.js](https://github.com/justadudewhohacks/face-api.js/) for face recognition
+- jsonwebtoken(jwt) for user authentication
+
+
 ### Setting up the project
 
 Follow the following steps to setup this project.
@@ -14,6 +25,11 @@ Follow the following steps to setup this project.
 Install the dependencies using
 ```
 npm install
+```
+
+**Note** - Make sure in the **package.json** file that **@tensorflow/tfjs-node1.7.0** is installed. If not installed than insatll it using 
+```
+npm i @tensorflow/tfjs-node@1.7.0
 ```
 
 Then you can finally run the server using this command.
