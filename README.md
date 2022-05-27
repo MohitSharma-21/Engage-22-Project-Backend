@@ -9,6 +9,7 @@ In this project, I have used:
 - Mongodb as a database
 - [face-api.js](https://github.com/justadudewhohacks/face-api.js/) for face recognition
 - jsonwebtoken(jwt) for user authentication
+- Deployed the APIs at https://picture-and-todo-manager.herokuapp.com/
 
 
 ### Setting up the project
