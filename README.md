@@ -11,7 +11,7 @@
 ## API Description
 
 ### Auth System
-For this API, I have used Token-based Authorization. All the requests made to the API (except the sign-in and sign-up endpoints) shall need an  *Authorization header*  with a valid token and the prefix  *Token *.
+For this API, I have used Token-based Authorization. All the requests made to the API (except the sign-in and sign-up endpoints) shall need an  *Authorization header*  with a valid token and the prefix  *Token*.
 
 I have used jason web tokens(jwt) for tokens.
 
