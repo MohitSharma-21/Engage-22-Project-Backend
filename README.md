@@ -10,11 +10,14 @@ In this project, I have used:
 - [face-api.js](https://github.com/justadudewhohacks/face-api.js/) for face recognition
 - jsonwebtoken(jwt) for user authentication
 - Deployed the APIs at https://picture-and-todo-manager.herokuapp.com/
+- **Frontend** part can be found [here](https://github.com/MohitSharma-21/Engage-22-Project-Frontend)
 
 
 ### Setting up the project
 
 Follow the following steps to setup this project.
+
+Or More detailed setup is [here](https://docs.google.com/document/d/1C9-GtIkLhgYKe-9f2ZyujzEh_CabTlwG0jOldP-kJaM/edit?usp=sharing)
 
 **Note** - This project requires mongodb database and npm package manager to run on the local system.
 
@@ -33,6 +36,19 @@ npm install
 npm i @tensorflow/tfjs-node@1.7.0
 ```
 
+
+**Note** - Make the **.env** file in the root directory and 
+
+Add value for SECRET_KEY_JWT and add your mongodb database URL 
+
+**make sure that the values are without opening and closing inverted commas**
+
+```
+SECRET_KEY_JWT = 
+DB_URL = 
+
+```
+
 Then you can finally run the server using this command.
 ```
 nodemon index.js
@@ -47,6 +63,7 @@ Run this command in different terminal for connecting to local system database
 mongod
 ```
 
+
 **Note** - If error comes like the below.
 
 ```
@@ -55,7 +72,7 @@ mongod
  Error: Cannot find the specified module.
 ```
 
- **Move** node_modules@tensorflow\tfjs-node\deps\lib\tensorflow.dll **to** node_modules@tensorflow\tfjs-node\lib\napi-v6
+ **Copy or Move** node_modules@tensorflow\tfjs-node\deps\lib\tensorflow.dll **to** node_modules@tensorflow\tfjs-node\lib\napi-v6
  
 **ps** napi-v6 could be v5 or else depending on version
 
