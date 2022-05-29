@@ -56,14 +56,6 @@ nodemon index.js
 
 On successful execution and connecting to the database It will console log "Server connnected..." .
 
-**Note** - If you want to connect to local system database, make sure that you have installed mongodb.
-
-Run this command in different terminal for connecting to local system database
-```
-mongod
-```
-
-
 **Note** - If error comes like the below.
 
 ```
@@ -76,6 +68,14 @@ mongod
  
 **ps** napi-v6 could be v5 or else depending on version
 
+
+
+**Note** - If you want to connect to local system database, make sure that you have installed mongodb.
+
+Run this command in different terminal for connecting to local system database
+```
+mongod
+```
 
 ## API Description
 
